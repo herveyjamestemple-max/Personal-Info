@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #004e89;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f0f0f0;
+    --text-color: #333;
+    --linux-orange: #ff6b35;
+    --linux-blue: #004e89;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--linux-blue) 0%, #003a70 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.linux-logo {
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--linux-orange);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--linux-blue) 0%, #003a70 50%, var(--linux-orange) 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: slideDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out 0.2s backwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.btn {
+    background: var(--linux-orange);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--linux-blue);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    margin-top: 1.5rem;
+    color: var(--linux-orange);
+    margin-bottom: 1rem;
+}
+
+.about-text ul {
+    list-style: none;
+}
+
+.about-text li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.linux-box {
+    background: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--linux-orange);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.terminal-text {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    animation: typewriter 3s steps(50, end) infinite;
+}
+
+@keyframes typewriter {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Distros Section */
+.distros {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8eef7 100%);
+}
+
+.distros h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--linux-blue);
+}
+
+.distro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.distro-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--linux-orange);
+}
+
+.distro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.distro-card h3 {
+    color: var(--linux-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.distro-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--linux-orange);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Commands Section */
+.commands {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.commands h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--linux-blue);
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.command-card {
+    background: linear-gradient(135deg, var(--dark-bg), #2a2a2a);
+    color: #00ff00;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 3px solid var(--linux-orange);
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.command-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+}
+
+.command-card code {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.command-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Terminal Section */
+.terminal-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8eef7 100%);
+}
+
+.terminal-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--linux-blue);
+}
+
+.terminal {
+    background: var(--dark-bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #333;
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+    color: white;
+    font-weight: bold;
+}
+
+.terminal-body {
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    min-height: 300px;
+}
+
+#terminal-output {
+    margin-bottom: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#terminal-output p {
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: var(--linux-orange);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--linux-blue);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.developer {
+    font-size: 1.3rem;
+    color: var(--linux-blue);
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8eef7 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--linux-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .distro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .command-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .distro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
+}

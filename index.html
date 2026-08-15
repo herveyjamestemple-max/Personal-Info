@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Hub - dev Hervey James</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="linux-logo">🐧</span>
+                <h1>Linux Hub By: Hervey James</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#distros">Distros</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Linux Hub</h2>
+            <p>Explore the power and freedom of Linux operating systems</p>
+            <button class="btn" onclick="scrollTo('about')">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>What is Linux?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Linux is a free, open-source operating system kernel created by Linus Torvalds in 1991. It powers everything from smartphones and desktops to servers and supercomputers.</p>
+                    <h3>Why Choose Linux?</h3>
+                    <ul>
+                        <li>✓ Open Source - Access to source code</li>
+                        <li>✓ Free - No licensing costs</li>
+                        <li>✓ Secure - Strong security features</li>
+                        <li>✓ Flexible - Highly customizable</li>
+                        <li>✓ Stable - Reliable performance</li>
+                        <li>✓ Community - Large, supportive community</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="linux-box">
+                        <p class="terminal-text">$ sudo apt-get install freedom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distributions Section -->
+    <section id="distros" class="distros">
+        <div class="container">
+            <h2>Popular Linux Distributions</h2>
+            <div class="distro-grid">
+                <div class="distro-card">
+                    <h3>Ubuntu</h3>
+                    <p>User-friendly and widely used. Perfect for beginners.</p>
+                    <span class="badge">Community Favorite</span>
+                </div>
+                <div class="distro-card">
+                    <h3>Fedora</h3>
+                    <p>Cutting-edge features and latest technologies.</p>
+                    <span class="badge">Cutting Edge</span>
+                </div>
+                <div class="distro-card">
+                    <h3>Debian</h3>
+                    <p>Stable, reliable, and the basis for many distros.</p>
+                    <span class="badge">Rock Solid</span>
+                </div>
+                <div class="distro-card">
+                    <h3>CentOS</h3>
+                    <p>Enterprise-focused with long support cycles.</p>
+                    <span class="badge">Enterprise</span>
+                </div>
+                <div class="distro-card">
+                    <h3>Arch Linux</h3>
+                    <p>Minimalist and flexible for advanced users.</p>
+                    <span class="badge">Advanced</span>
+                </div>
+                <div class="distro-card">
+                    <h3>Linux Mint</h3>
+                    <p>Easy to use with Windows-like interface.</p>
+                    <span class="badge">Beginner Friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="commands">
+        <div class="container">
+            <h2>Essential Linux Commands</h2>
+            <div class="command-grid">
+                <div class="command-card">
+                    <code>ls</code>
+                    <p>List directory contents</p>
+                </div>
+                <div class="command-card">
+                    <code>cd</code>
+                    <p>Change directory</p>
+                </div>
+                <div class="command-card">
+                    <code>pwd</code>
+                    <p>Print working directory</p>
+                </div>
+                <div class="command-card">
+                    <code>mkdir</code>
+                    <p>Make a new directory</p>
+                </div>
+                <div class="command-card">
+                    <code>touch</code>
+                    <p>Create empty file</p>
+                </div>
+                <div class="command-card">
+                    <code>rm</code>
+                    <p>Remove files/directories</p>
+                </div>
+                <div class="command-card">
+                    <code>cp</code>
+                    <p>Copy files</p>
+                </div>
+                <div class="command-card">
+                    <code>mv</code>
+                    <p>Move/rename files</p>
+                </div>
+                <div class="command-card">
+                    <code>sudo</code>
+                    <p>Run as superuser</p>
+                </div>
+                <div class="command-card">
+                    <code>apt/yum</code>
+                    <p>Package managers</p>
+                </div>
+                <div class="command-card">
+                    <code>grep</code>
+                    <p>Search text patterns</p>
+                </div>
+                <div class="command-card">
+                    <code>chmod</code>
+                    <p>Change file permissions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Section -->
+    <section id="terminal" class="terminal-section">
+        <div class="container">
+            <h2>Try Linux Commands</h2>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span>Terminal</span>
+                </div>
+                <div class="terminal-body">
+                    <div id="terminal-output">
+                        <p>$ Welcome to Linux Hub Terminal Simulator</p>
+                        <p>$ Type a command or try: hello, date, whoami, joke</p>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">$</span>
+                        <input 
+                            type="text" 
+                            id="command-input" 
+                            placeholder="Enter command..." 
+                            onkeypress="handleCommand(event)"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>Questions about Linux? Want to learn more?</p>
+                <p class="developer">Developed by <strong>hervey james</strong></p>
+                <div class="contact-info">
+                    <p>📧 Email: herveyjamestemple@gmail.com</p>
+                    <p>🔗 GitHub: herveyjamestemple@gmail.com</p>
+                    <p>💬 Discord: herveyjamestemple@gmail.com</p>
+                </div>
+                <button class="btn" onclick="contactUs()">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+                        <p>&copy; 2026 Linux Hub | Developed by <strong>hervey james</strong> | Made with 💙 for the Linux Community</p>
+                 
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
